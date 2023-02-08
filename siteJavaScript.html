@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Air Quality Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+  crossorigin=""></script>
+  <style>
+    #map {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <style>
+    html, body {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <input type="date" id="dateInput" style="position:absolute;top:20px;left:50px;z-index:1">
+  <div id="map" style="position:relative;height:100vh;z-index:0">
+  </div>
+
+
+
+  <script>
+    var data = [
+      {timestamp: "2022-01-01", sensorID: "A", pm25: 10, pm10: 20, latitude: 53.3498, longitude: -6.2603},
+      {timestamp: "2022-01-02", sensorID: "B", pm25: 15, pm10: 25, latitude: 53.3489, longitude: -6.2468},
+      // Add more data here
+    ];
+
+    var map = L.map('map').setView([53.3501, -6.26], 12);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    var markers = [];
+    for (var i = 0; i < data.length; i++) {
+      var marker = L.marker([data[i].latitude, data[i].longitude]).addTo(map);
+      marker.bindPopup("Sensor ID: " + data[i].sensorID + "<br>PM2.5: " + data[i].pm25 + "<br>PM10: " + data[i].pm10);
+      markers.push(marker);
+    }
+
+    var zones = [];
+
+for (var i = 0; i < data.length; i++) {
+  var color = "";
+  if (data[i].pm25 < 12) {
+    color = "#00FF00";
+  } else if (data[i].pm25 >= 12 && data[i].pm25 < 35.5) {
+    color = "#FFFF00";
+  } else if (data[i].pm25 >= 35.5 && data[i].pm25 < 55.5) {
+    color = "#FFA500";
+  } else if (data[i].pm25 >= 55.5 && data[i].pm25 < 150.5) {
+    color = "#FF0000";
+  } else {
+    color = "#8B008B";
+  }
+  var zone = L.circle([data[i].latitude, data[i].longitude], {
+    color: color,
+    fillColor: color,
+    fillOpacity: 0.5,
+    radius: 500
+  }).addTo(map);
+  zone.bindPopup("Sensor ID: " + data[i].sensorID + "<br>PM2.5: " + data[i].pm25 + "<br>PM10: " + data[i].pm10);
+  zones.push(zone);
+}
+        
+  document.querySelector("#datepicker").addEventListener("input", function() {
+    let selectedDate = this.value;
+    let markers = document.querySelectorAll(".marker");
+    markers.forEach(function(marker) {
+      let markerDate = marker.getAttribute("data-date");
+      if (markerDate === selectedDate) {
+        marker.style.display = "block";
+      } else {
+        marker.style.display = "none";
+      }
+    });
+  });
+  </script>
+</body>
+</html>
