@@ -16,7 +16,7 @@ dateprint.innerHTML = String(date.getDate()) + "/" + String(date.getMonth() + 1)
 slider.oninput = function() {
   date = new Date( parseInt(this.value) );
   dateprint.innerHTML = String(date.getDate()) + "/" + String(date.getMonth() + 1) + "/" + String(date.getFullYear());
-  setDayData(parseInt(this.value), pm);
+  setDayData(parseInt(this.value), select.value);
 }
 
 // === Map ===
@@ -63,9 +63,10 @@ function getColor(value) {
 
 function addHeatmap(data) {
   heat = L.heatLayer(data, {
-    radius: 25,
+    radius: 5,
     CanvasGradient: getColor,
-    blur: 50,
+    blur: 10,
+
    }).addTo(mymap);
 }
 
@@ -87,8 +88,8 @@ function clearHeatmap() {
 
 select.addEventListener("change", function() {
   console.log("Select changed:  " + this.value);
-  pm = this.value;
-  setDayData(parseInt(slider.value), pm);
+  data_type_pm = this.value;
+  setDayData(parseInt(slider.value), data_type_pm);
 });
 
 // === Play button ===
@@ -113,7 +114,7 @@ playButton.addEventListener("click", function() {
   // Parcourir tous les timestamps de la date de début à la date de fin
   function refreshHeatmap(timestamp, dateFin, pm) {
     if ((timestamp <= dateFin) && playButton.classList.contains("playing")) {
-      setDayData(slider.value, pm);
+      setDayData(slider.value, select.value);
       slider.value = timestamp;
       date = new Date( parseInt(slider.value) );
       dateprint.innerHTML = String(date.getDate()) + "/" + String(date.getMonth() + 1) + "/" + String(date.getFullYear());

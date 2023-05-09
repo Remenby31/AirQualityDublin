@@ -1,7 +1,10 @@
 <?php
 $timestamp = $_GET['timestamp'];
 $dateString = date('Y-m-d', $timestamp);
-$filePath = __DIR__ . '/DataDublin/DCU_mixed_01-10-2021_31-07-2022/' . $dateString . '.csv';
+
+$data_type = $_GET['data_type'];
+
+$filePath = __DIR__ . '/DataDublin/' . $data_type . '/' . $dateString . '.csv';
 
 if (file_exists($filePath)) {
     $fileContents = file_get_contents($filePath);

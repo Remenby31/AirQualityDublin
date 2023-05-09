@@ -27,8 +27,16 @@
 
   <!-- Select -->
   <select id="pm-select">
-    <option value="pm25">PM2,5</option>
-    <option value="pm10">PM10</option>
+    <option value="Mixed-pm25">Base - pm2.5</option>
+    <option value="Mixed-pm10">Base - pm10</option>
+    <option value="InterpolationST-pm25">InterpolationST - pm2.5</option>
+    <option value="InterpolationST_Filter20-pm25">InterpolationST_f - pm2.5</option>
+    <option value="matrix3D_randomForest_filtre-pm25">Random Forest - pm2.5</option>
+    <option value="matrix3D_ANN_filtre-pm25">ANN - pm2.5</option>
+    <option value="matrix3D_GBM_filtre-pm25">GBM - pm2.5</option>
+    <option value="matrix3D_regressionLineaire_filtre-pm25">Regression Lineaire - pm2.5</option>
+    <option value="matrix3D_regressionLasso_filtre-pm25">Regression Lasso - pm2.5</option>
+    <option value="matrix3D_regressionRidge_filtre-pm25">Regression Ridge - pm2.5</option>
   </select>
 
   <!-- PlayButton -->

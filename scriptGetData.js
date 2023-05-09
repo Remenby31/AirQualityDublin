@@ -1,9 +1,12 @@
 var xhttp = new XMLHttpRequest();
 
-function sendPhpRequest(timestamp, pm) {
+function sendPhpRequest(timestamp, data_type_pm) {
+    // split data_type by -
+    var data_type = data_type_pm.split("-")[0];
+    var pm = data_type_pm.split("-")[1];
     // Diviser le timestamp par 1000 pour le convertir en secondes
     timestamp = timestamp / 1000;
-    url = "http://localhost/mapHTML_dtd/getDayData.php?timestamp=" + timestamp;
+    url = "http://localhost/mapHTML_dtd/getDayData.php?timestamp=" + timestamp + "&data_type=" + data_type;
     xhttp.onreadystatechange = function() {
         if (xhttp.readyState == 4 && xhttp.status == 200) {
             // No data
@@ -56,6 +59,6 @@ function getMidnightTimestamp(timestamp) {
 }
   
 
-function setDayData(timestamp, pm) {
-    sendPhpRequest(timestamp, pm);
+function setDayData(timestamp, data_type_pm) {
+    sendPhpRequest(timestamp, data_type_pm);
 }
