@@ -8,18 +8,18 @@ times of the day.
 # Project Overview
 The project will proceed in several key stages: Data Collection, Analysis and Mapping and finally
 Handling missing values.
-## Data Collection
+### Data Collection
 The sensors in question are responsible for collecting the following information, which we will need to
 process:
 • Air quality indicators (pm2.5 and pm10)
 • GPS coordinates
 • Date and time of data collection
-## Analysis and Mapping
+### Analysis and Mapping
 By focusing on the air quality indicators (pm2.5 and pm10) and combining this information with GPS
 coordinates, dates and times, we have the opportunity to create a dynamic picture of the environmental
 situation in Dublin. Our first step is to develop a map that illustrates this data, providing a clear view
 of air quality at different times of the day.
-## Handling missing values
+### Handling missing values
 However, there will be missing values in our dataset, and this is the heart of our project. We will
 implement various techniques and models to predict these missing values, exploring the correlation
 between air quality and other sources of information, such as meteorological data. By estimating these
