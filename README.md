@@ -30,3 +30,9 @@ Our quest to understand the factors influencing these variations will lead us to
 of the Dublin environment and to the discovery of valuable tools for environmental policy and urban
 planning decisions. Ultimately, beyond simply collecting data, this project will allow us to contribute
 to building a healthier future for Ireland’s capital city and its residents.
+
+# How to use it
+
+1. Copy the data in the foder *DataDublin*/*name_data*
+2. Run XAMPP and start Apache
+3. Open the file *siteJavaScript.html* in a web browser
