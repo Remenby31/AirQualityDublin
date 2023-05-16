@@ -31,7 +31,8 @@ of the Dublin environment and to the discovery of valuable tools for environment
 planning decisions. Ultimately, beyond simply collecting data, this project will allow us to contribute
 to building a healthier future for Ireland’s capital city and its residents.
 
-# How to use it
+
+# How to use the html viewer
 
 1. Copy the data in the foder *DataDublin*/*name_data*
 2. Run XAMPP and start Apache
