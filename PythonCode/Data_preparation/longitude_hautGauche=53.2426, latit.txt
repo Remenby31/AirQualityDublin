@@ -1,0 +1,12 @@
+longitude_hautGauche=53.2426, latitude_hautGauche=-6.3226, longitude_basDroit=53.1608, latitude_basDroit=-6.0928
+
+longitude_hautGauche=53.1608, latitude_hautGauche=-6.0928, longitude_basDroit=53.2426, latitude_basDroit=-6.3226
+
+longitude_hautGauche=53.1608, latitude_hautGauche=-6.0928, longitude_basDroit=53.2426, latitude_basDroit=-6.3226
+
+longitude_hautGauche=-6.3226, latitude_hautGauche=53.2426, longitude_basDroit=-6.0928, latitude_basDroit=53.1608
+
+Hautgauche:53.40770831718198 -6.385765160158097
+BasDroit: 53.27289327467902 -6.157192225564314
+
+longitude_hautGauche=-6.385765160158097, latitude_hautGauche=53.40770831718198, longitude_basDroit=-6.157192225564314, latitude_basDroit=53.27289327467902
