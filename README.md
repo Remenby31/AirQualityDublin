@@ -1,13 +1,17 @@
-<img src="PythonCode/output/Figure_1r.png" width="200" height="200">
+<p align="center">
+    <img src="PythonCode/output/Figure_1r.png" width="200" height="200">
+</p>
 
-# Background
+# Analysis of Air Quality in Dublin using IoT and Machine Learning
+
+## Background
 Air quality is a major public health and urban ecological issue. In Dublin, the capital of Ireland, the
 situation is of concern due to the constant increase in population and road traffic. This innovative
 project aims to collect data on air quality in Dublin using DPD delivery vehicles as a means of
 measurement. Sensors installed on these vehicles record air quality data as they travel around the city
 each day, making it possible to track changes in air quality in different neighborhoods and at different
 times of the day.
-# Project Overview
+## Project Overview
 The project will proceed in several key stages: Data Collection, Analysis and Mapping and finally
 Handling missing values.
 ### Data Collection
@@ -27,14 +31,14 @@ implement various techniques and models to predict these missing values, explori
 between air quality and other sources of information, such as meteorological data. By estimating these
 values, we will build a more complete and reliable dataset for analysis, revealing the unknowns and
 correlations behind air quality variations.
-# Long-Term Goals
+## Long-Term Goals
 Our quest to understand the factors influencing these variations will lead us to a better understanding
 of the Dublin environment and to the discovery of valuable tools for environmental policy and urban
 planning decisions. Ultimately, beyond simply collecting data, this project will allow us to contribute
 to building a healthier future for Ireland’s capital city and its residents.
 
 
-# How to use the html viewer
+## How to use the html viewer
 
 1. Copy the data in the foder *DataDublin*/*name_data*
 2. Run XAMPP and start Apache
