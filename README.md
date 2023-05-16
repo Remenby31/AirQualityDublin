@@ -1,4 +1,4 @@
-![Texte alternatif](PythonCode/output/Figure_1r.png)
+![Analysis of Air Quality in Dublin using IoT and Machine Learning](PythonCode/output/Figure_1r.png){:height="300px" width="500px"}
 
 # Background
 Air quality is a major public health and urban ecological issue. In Dublin, the capital of Ireland, the
