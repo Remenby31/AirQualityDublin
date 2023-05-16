@@ -1,4 +1,4 @@
-![Texte alternatif](PythonCode\output\Figure_1r.png)
+![Texte alternatif](PythonCode/output/Figure_1r.png)
 
 # Background
 Air quality is a major public health and urban ecological issue. In Dublin, the capital of Ireland, the
